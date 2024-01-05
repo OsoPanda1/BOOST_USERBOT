@@ -29,7 +29,6 @@ pings.clear()
 @app.on_message(gen(["ping", "pong"], allow=["sudo", "channel"]))
 async def ping_handler(_, m: Message):
     try:
-
         if app.long(m) == 1:
             start = datetime.now()
             m = await app.send_edit(m, ". . .", text_type=["mono"])

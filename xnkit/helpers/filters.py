@@ -9,7 +9,6 @@ from pyrogram.types import CallbackQuery, InlineQuery, Message, Update
 # custom regex filter
 def regex(pattern: Union[str, Pattern], flags: int = 0, allow: list = []):
     async def func(flt, client: Client, update: Update):
-
         # work for -> sudo & bot owner if sudo
         if "sudo" in allow:
             if update.from_user and not (
@@ -72,10 +71,8 @@ def gen(
     case_sensitive: bool = True,
     allow: list = [],
 ):
-
     # modified function of pyrogram.filters.command
     async def func(flt, client: Client, message: Message):
-
         try:
             text = message.text or message.caption or None
 

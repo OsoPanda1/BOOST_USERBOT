@@ -6,7 +6,6 @@ from . import BASE, SESSION
 
 
 class DV(BASE):
-
     __tablename__ = "database var"
 
     keys = Column(String, primary_key=True)

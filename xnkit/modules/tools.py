@@ -186,7 +186,6 @@ async def saved_handler(_, m: Message):
 async def forward_handler(_, m: Message):
     reply = m.reply_to_message
     try:
-
         if reply and app.long(m) == 1:
             await reply.forward(m.chat.id)
             delete = True

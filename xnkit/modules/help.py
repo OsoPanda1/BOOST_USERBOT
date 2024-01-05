@@ -86,7 +86,6 @@ async def helpdex_handler(_, m: Message):
                     text_type=["mono"],
                 )
         elif args:
-
             module_help = await app.data(args[1])
             if not module_help:
                 await app.send_edit(
